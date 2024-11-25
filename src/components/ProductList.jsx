@@ -16,7 +16,7 @@ const ProductList = () => {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await axios.get('http://localhost:3001/api/products'); // Adjust the API endpoint as needed
+                const response = await axios.get('https://nameless-waters-82317-75da4f904716.herokuapp.com/api/products'); // Adjust the API endpoint as needed
                 const products = response.data;
                 console.log("Are Here",products)
                 // Extract unique product types from the products
