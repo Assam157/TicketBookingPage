@@ -41,9 +41,9 @@ const BuyPage = () => {
             alert('Razorpay SDK failed to load. Are you online?');
             return;
         }
-    
+       const apiUrl = `http://localhost:3001/api/razorpay/create-order?username=${encodeURIComponent(username)}`;
         // Step 3: Call your PHP backend to create an order
-        const orderData = await fetch('https://nameless-waters-82317-75da4f904716.herokuapp.com/api/razorpay/create-order', {
+        const orderData = await fetch(apiUrl, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ amount: totalPrice })
