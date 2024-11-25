@@ -48,6 +48,8 @@ const BuyPage = () => {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ amount: totalPrice })
         }).then(res => res.json());
+
+        console.log(orderData);
     
         const options = {
             key: 'rzp_test_SGmdC8LUxtlgND', // Replace with your Razorpay key
