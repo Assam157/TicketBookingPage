@@ -19,8 +19,9 @@ const ProductItem = ({ product }) => {
         <div className="product-card">
             <img className="product-image" src={product.image} alt={product.name} />
             <div className="product-details">
-                <h3 style={{ fontWeight: "700" }}>{product.name}</h3>
-                <p style={{ fontWeight: "300" }}>{product.description}</p>
+                <h3 style={{ fontWeight: "700" }}>{product.Route}</h3>
+                <p style={{ fontWeight: "700" }}>{product.Arrival}</p>
+                <p style={{fontWeight:"700"}}>{product.Departure}</p>
                 <p style={{ fontWeight: "500" }}>Price: {product.price} Rs</p>
                 <p style={{fontWeight:"450"}}>Description:{product.description}</p>
                 <p style={{fontWeight:"320"}}>Available Amount:{product.availableQuant}</p>
