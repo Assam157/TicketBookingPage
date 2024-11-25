@@ -43,7 +43,7 @@ const BuyPage = () => {
         }
     
         // Step 3: Call your PHP backend to create an order
-        const orderData = await fetch('http://localhost:3001/api/razorpay/create-order', {
+        const orderData = await fetch('https://nameless-waters-82317-75da4f904716.herokuapp.com/api/razorpay/create-order', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ amount: totalPrice })
@@ -65,7 +65,7 @@ const BuyPage = () => {
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(response)
                 });
-                const stockUpdateResponse = await fetch('http://localhost:3001/update_stock', {
+                const stockUpdateResponse = await fetch('https://nameless-waters-82317-75da4f904716.herokuapp.com/update_stock', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ products: productsToBuy })
@@ -89,7 +89,7 @@ const BuyPage = () => {
                 const encodedEmailPayload = encodeURIComponent(JSON.stringify(emailPayload));
     
                 // Construct the URL with query parameters for GET request
-                const emailUrl = `http://localhost:3001/send_email?username=${username}&emailPayload=${encodedEmailPayload}`;
+                const emailUrl = `https://nameless-waters-82317-75da4f904716.herokuapp.com/send_email?username=${username}&emailPayload=${encodedEmailPayload}`;
     
                 // Send the GET request
                 await fetch(emailUrl)
