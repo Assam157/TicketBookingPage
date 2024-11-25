@@ -21,7 +21,7 @@ const ProductList = () => {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await axios.get('http://localhost:3001/api/products');
+                const response = await axios.get('https://nameless-waters-82317-75da4f904716.herokuapp.com/api/products');
                 const products = response.data; // Assuming the API returns an array of products
                 const arrivalStations = [...new Set(products.map(product => product.Arrival))];
                 const departureStations = [...new Set(products.map(product => product.Departure))];
